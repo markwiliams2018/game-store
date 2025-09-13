@@ -4,6 +4,8 @@ builder.Services.AddRazorComponents();
 builder.Services.AddSingleton<GamesClient>();
 builder.Services.AddSingleton<GenresClient>();
 
+builder.Services.AddAntiforgery();
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
